@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki Quiz Generator</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Wiki Quiz Generator</h1>
+      <div class="tabs">
+        <button id="tab-generate" class="tab active">Generate Quiz</button>
+        <button id="tab-history" class="tab">Past Quizzes</button>
+      </div>
+
+      <section id="generate-view" class="view active">
+        <div class="controls">
+          <input id="wiki-url" type="url" placeholder="Enter Wikipedia URL" />
+          <button id="generate-btn">Generate Quiz</button>
+        </div>
+        <p id="status"></p>
+        <div id="quiz-output"></div>
+      </section>
+
+      <section id="history-view" class="view">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>URL</th>
+              <th>Created At</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="history-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-modal" class="close-btn">Close</button>
+        <div id="modal-content-inner"></div>
+      </div>
+    </div>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
